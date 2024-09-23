@@ -1,0 +1,379 @@
+ *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --fundo:#EEEEEE;
+    --navbar: #2d3297;
+    --fundo_conscientizacao: #FFBF42;
+    --titulo_perguntas: #0F0F0F;
+    --fundo_cadastro:#585CC3;
+    --titulo_cadastro:#BDC0FF;
+    --card_cadastro: #1F2488;
+    --texto_card_cadastro: #FFA800;
+    --veja_mais:#FF5C00;
+    --bolha: #CBCBCB;
+    --texto-navbar: #dddef0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--fundo);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+/* NAVBAR */
+
+header{
+    display: flex;
+    background-color: var(--navbar);
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.textonav{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 5%;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--texto-navbar);
+    font-family: "Cabin", sans-serif;
+    font-size: 1.1em;
+}
+
+#logo{
+    width: 6%;
+}
+
+/* header{
+    display: flex;
+    background-color: var(--navbar);
+    color: #EEEEEE;
+    padding-top: 0.5%;
+}
+
+nav{
+    display: flex;
+    padding: 1.5%;
+    font-family: "Cabin", sans-serif;
+    font-size: 1.2em;
+    flex-direction: row;
+    gap: 55px;
+}
+
+nav a {
+    display: flex;
+    text-decoration: none;
+    color: #BDC0FF;
+}
+
+#logo{
+    display: flex;
+    width: 6vw;
+    padding-left: 1%;
+} */
+
+/* CARROSSEL */
+
+/* #carrossel {
+    overflow: hidden;
+} */
+
+.carrossel img {
+    width: 100%;
+}
+
+/* COMUNIDADE */
+
+.comunidade{
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+h2{
+    font-family: "Cabin", sans-serif;
+    font-size: 1.9em;
+    text-align: center;
+}
+
+.mom{
+    display: flex;
+    flex-direction: row;
+    padding-top: 3%;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}
+
+#compartilhar{
+    font-family: "Cabin", sans-serif;
+    font-size: 1.4em;
+    color: #2C2C2C;
+    width: 30vw;
+    text-align: justify;
+}
+
+#cardcomunidade{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #2C2C2C;
+    background-color: #1F2493;
+    padding: 1.4%;
+    border-radius: 1vh;
+    justify-content: center;
+}
+
+#seta{
+    width: 4.5vw;
+}
+
+#linkagem{
+    display: flex;
+    font-family: "Cabin", sans-serif;
+    font-size: 1.2em;
+    color:#FFD480;
+    text-align: center;
+    padding-top: 5%;
+    text-decoration: none;
+}
+
+.mom a{
+    display: flex;
+    width: 8vw;
+}
+
+/* CONSCIENTIZAÇÃO */
+
+.conscientizacao{
+    display: flex;
+    flex-direction: column;
+    background-color: #FFBF42;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+#conscientizacao_titulo{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3%;
+    color: #C15600;
+}
+
+.mom5{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5%;
+    padding-bottom: 2%;
+}
+
+.texto2{
+    display: flex;
+    flex-direction: column;
+    font-family: "Cabin", sans-serif;
+    font-size: 1.4em;
+    color: #2C2C2C;
+}
+
+#vejamais_consc{
+    padding-top: 3%;
+    text-decoration: none;
+    color: var(--veja_mais);
+}
+
+/* PERGUNTAS */
+
+.perguntas{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-family: "Cabin", sans-serif;
+}
+
+#titulo_perguntas{
+    display: flex;
+    flex-direction: column;
+    color: var(--titulo_perguntas);
+    padding-top: 5%;
+}
+
+.mom3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8%;
+    font-size: 1.4em;
+}
+
+.mom4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8%;
+    font-size: 1.4em;
+}
+
+#perguntas1{
+    background-color: var(--bolha);
+    padding: 1%;
+    border-radius: 1.2vh;
+    box-shadow: 3px 3px 3px rgb(97, 97, 97);
+}
+
+#perguntas2{
+    background-color: var(--bolha);
+    padding: 1%;
+    border-radius: 1.2vh;
+    box-shadow: 3px 3px 3px rgb(97, 97, 97);
+}
+
+#perguntas3{
+    background-color: var(--bolha);
+    padding: 1%;
+    border-radius: 1.2vh;
+    box-shadow: 3px 3px 3px rgb(97, 97, 97);
+}
+
+#perguntas4{
+    background-color: var(--bolha);
+    padding: 1%;
+    border-radius: 1.2vh;
+    box-shadow: 3px 3px 3px rgb(97, 97, 97);
+}
+
+#vejamais_perguntas{
+    display: flex;
+    justify-content: center;
+    font-size: 1.3em;
+    color: #FF5C00;
+    font-weight: bold;
+    padding-bottom: 3%;
+}
+
+/* CADASTRO */
+
+.cadastro{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--fundo_cadastro);
+    padding-top: 2%;
+    padding-bottom: 2%;
+    /* gap: 10px; */
+}
+
+.mom2{
+    display: flex;
+    flex-direction: row;
+    gap: 30%;
+    padding-top: 3%;
+    padding-left: 20%;
+    padding-bottom: 13%;
+}
+
+#cadastro_titulo{
+    color:#BDC0FF;
+    padding-bottom: 3%;
+}
+
+#logo_cadastro{
+    display: flex;
+    width: 12vw;
+}
+
+.card_cadastro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3.5%;
+    border-radius: 1vh;
+    background-color: var(--card_cadastro);
+    box-shadow: 5px 5px 6px rgb(18, 19, 49);
+    width: 18vw;
+    height: 48vh;
+}
+
+#texto_card{
+    display: flex;
+    font-family: "Cabin", sans-serif;
+    font-size: 1.9em;
+    color: var(--texto_card_cadastro);
+    font-weight: bold;
+}
+
+input{
+    background: transparent;
+    outline: 0;
+    border: 0;
+    border-bottom: 1px solid var(--titulo_cadastro);
+    color: var(--titulo_cadastro);
+    font-family: "Cabin", sans-serif;
+    width: 100%;
+}
+
+#dados{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 30%;
+    /* justify-content: space-between; */
+    gap: 7vh;
+}
+
+.value{
+    font-family: "Cabin", sans-serif;
+    font-size: 1.3em;
+}
+
+input::placeholder{
+    color: var(--titulo_cadastro);
+    font-family: "Cabin", sans-serif;
+    /* font-size: 1.3em; */
+}
+
+#botao {
+    /* width: 10vw; */
+    padding: 2.5%;
+    font-family:  "Cabin", sans-serif;
+    font-size: 1.5rem;
+    background-color: var(--card_cadastro);
+    border: 0;
+    border-radius: .5vh;
+    cursor: pointer;
+    color:#EEEEEE;
+}
+
+#botao:hover{
+    background: transparent;
+    transition: .2s;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active{
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #ffffff;
+    transition: background-color 5000s ease-in-out 0s;
+    box-shadow: inset 0 0 20px 20px #23232300;
+}

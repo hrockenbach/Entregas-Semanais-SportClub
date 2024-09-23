@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/iconproduto.png" type="image/x-icon">
+    <link rel="stylesheet" a href="mapa.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="../MAPA/img.mapa/iconproduto.png" type="image/x-icon">
+
+    <title> Sport Club</title>
+
+</head>
+
+<body>
+    <header>
+
+        <img src="../PERFIL/perfil.img/iconproduto.png" id="logo">
+
+        <nav>
+
+            <section class="textonav">
+
+                <a href="../HOME/index.html"> Home </p>
+                    <a href="../MAPA/mapa.html"> Mapa </a>
+                    <a href="../COMUNIDADE/comunidade.html"> Comunidade </a>
+                    <a href="../CONSCIENTIZACAO/conscientização.html"> Conscientização </a>
+                    <a href="../PERFIL/perfil.html"> Perfil </a>
+                    <a href="../CONFIGURACOES/configuracoes.html"> Configurações </a>
+
+            </section>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section class="mapa">
+
+            <div id="map"></div>
+
+            <!-- Link para o JavaScript do Leaflet -->
+            <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+            <!-- Adicionando o script GeoJSON diretamente para este exemplo -->
+
+        </section>
+
+        <script>
+            var saoleopoldoGeoJSON = {
+                "type": "FeatureCollection",
+                "features": [
+                    // Adicione aqui as features do arquivo GeoJSON de São Leopoldo
+                ]
+            };
+        </script>
+        <script>
+            var map = L.map('map').setView([-29.7544, -51.1496], 13); // Coordenadas aproximadas de São Leopoldo
+
+            // Adiciona o tile layer do OpenStreetMap
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            // Adiciona a camada GeoJSON de São Leopoldo
+            L.geoJSON(saoleopoldoGeoJSON).addTo(map);
+
+            // Definindo algumas quadras de vôlei
+            var quadras = [
+                { "name": "W7 Arena", "coords": [-29.7580, -51.1535], "quadra": "Normal", "classificacao": "5 Estrelas" },
+                { "name": "SPEED Campina Vôlei e Futsal", "coords": [-29.7605, -51.1482], "quadra": "normal", "classificacao": "4.8 Estrelas" },
+                { "name": "4Play Beach Sports", "coords": [-29.7642, -51.1458], "quadra": "praia", "classificacao": "4.7 Estrelas" },
+                { "name": "Orange Complexo Esportivo", "coords": [-29.7677, -51.1434], "quadra": "normal", "classificacao": "4.3 Estrelas" },
+                { "name": "Quintal Power", "coords": [-29.7712, -51.1410], "quadra": "normal", "classificacao": "5 Estrelas" }
+                // {"name": ""}
+                // {"name": "Centro Esportivo Brazuka", "coords": []}
+            ];
+
+            // Adicionando marcadores para as quadras de vôlei
+            quadras.forEach(function (quadra) {
+                var marker = L.marker(quadra.coords).addTo(map);
+                var popupContent = '<b>' + quadra.name + '</b><br>Quadra: ' + quadra.quadra + '<br>Classificação: ' + quadra.classificacao;
+                marker.bindPopup(popupContent);
+            });
+        </script>
+
+        <!-- CARROSSEL -->
+
+        <section class="carrossel">
+
+            <div class="carousel">
+
+                <button class="carousel-button prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="carousel-button next" onclick="moveSlide(1)">&#10095;</button>
+
+                <div class="carousel-images">
+
+                    <img src="img.mapa/Rectangle 20.png">
+
+                    <img src="img.mapa/Rectangle 20.png">
+
+                    <img src="img.mapa/Rectangle 20.png">
+
+                </div>
+            </div>
+
+            <div class="infosQ">
+
+                <h3> Orange </h3>
+                <p> Quadra de vôlei de areia </p>
+                <p> Contato em: (51) 9999-999 </p>
+
+            </div>
+        </section>
+
+        <!-- <section class="card">
+
+            <img src="img.mapa/Rectangle 20.png" id="quadra">
+
+            <div class="info">
+                <p> Esporte no Corpo </p>
+                <p> Espaço para vôlei </p>
+                <p> Necessário marcar horário e combinar valores </p>
+                <p> Número para contato: 99 9999-999 </p>
+            </div>
+
+        </section>
+
+        <section class="card">
+
+            <img src="img.mapa/Rectangle 20.png" id="quadra">
+
+            <div class="info">
+                <p> Quadra de Vôlei de Areia </p>
+                <p> Espaço para vôlei </p>
+                <p> Necessário marcar horário e combinar valores </p>
+                <p> Número para contato: 99 9999-999 </p>
+            </div>
+
+        </section> -->
+
+    </main>
+
+    <script src="mapa.js"> </script>
+
+</body>
+
+</html>

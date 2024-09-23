@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/iconproduto.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="comunidade.css">
+    <link rel="shortcut icon" href="../COMUNIDADE/img.comunidade/iconproduto.png" type="image/x-icon">
+
+    <title> Sport Club</title>
+</head>
+
+<body>
+
+    <header>
+
+        <img src="../PERFIL/perfil.img/iconproduto.png" id="logo">
+
+        <nav>
+
+            <section class="textonav">
+
+                <a href="../HOME/index.html"> Home </p>
+                    <a href="../MAPA/mapa.html"> Mapa </a>
+                    <a href="../COMUNIDADE/comunidade.html"> Comunidade </a>
+                    <a href="../CONSCIENTIZACAO/conscientização.html"> Conscientização </a>
+                    <a href="../PERFIL/perfil.html"> Perfil </a>
+                    <a href="../CONFIGURACOES/configuracoes.html"> Configurações </a>
+
+            </section>
+        </nav>
+
+    </header>
+
+    <!-- CRIAR GRUPOS -->
+
+    <main>
+
+        <section class="criar_grupos">
+
+            <div class="infos_criacao">
+
+                <div class="textoGrupos">
+
+                    <h3> Criar Grupo</h3>
+
+                    <p> Clique no botão ao lado e crie um grupo só seu! </p>
+
+                </div>
+
+                <button class="adicionar" type="submit">
+                    <img id="botao" src="../COMUNIDADE/img.comunidade/plus.png">
+                </button>
+
+            </div>
+
+        </section>
+
+        <section class="sobreposicao">
+            <form id="sobreposicao" enctype="multipart/from-data">
+
+                <div class="card" id="card">
+                    <!-- <img src="../COMUNIDADE/img.comunidade/Ellipse 5.png" id="fotoGrupo"> -->
+
+                    <div class="infosCard">
+
+                        <input class="value" type="file" id="imagem" name="imagem">
+
+                        <input class="value" type="text" placeholder="Nome" id="nome_grupo" name="nome" >
+
+                        <input class="value" type="text" placeholder="Descrição" id="descricao" name="descricao">
+
+                        <div class="botoes">
+
+                            <button id="fechar"> Cancelar </button>
+
+                            <button id="salvar"> Salvar </button>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+        </section>
+
+        <!-- ESTRUTURA DOS GRUPOS CRIADOS -->
+
+        <!-- // <section class="retangulo">
+
+            //     <div class="grupos">
+
+            //     <img src="../COMUNIDADE/img.comunidade/Ellipse 5.png" id="foto">
+
+            //     <div class="infos">
+            //         <p id="titulo"> VOVOZINHOS DO FUT </p>
+            //         <p> 18 integrantes </p>
+            //         <p> Se junte a nós! </p>
+
+            //     </div>
+
+            // </div>
+            // </div> -->
+
+
+       <div id="gruposContainer"></div>
+
+    </main>
+
+    <script src="comunidade.js"></script>
+    <script src="scriptComunidade.js"></script>
+    <script src="scriptGruposComunidade.js"></script>
+
+
+</body>
+
+</html>

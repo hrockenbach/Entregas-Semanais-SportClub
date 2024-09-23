@@ -1,0 +1,121 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --fundo:#EEEEEE;
+    --navbar: #2d3297;
+    --fundo_1card: #FFC75B;
+    --texto: #2C2C2C;
+    --texto-navbar: #dddef0;
+    --titulos: #B65100;
+    --fundoIdoso: #585CC3;
+}
+
+/* NAVBAR */
+
+body{
+    background-color: var(--fundo);
+}
+
+header{
+    display: flex;
+    background-color: var(--navbar);
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.textonav{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 5%;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--texto-navbar);
+    font-family: "Cabin", sans-serif;
+    font-size: 1.1em;
+}
+
+#logo{
+    width: 6%;
+}
+
+/* CONSCIENTIZACAO ATIVIDADE FÍSICA */
+
+.quadroAtv{
+    display: flex;
+    background-color: var(--fundo_1card);
+    flex-direction: column;
+    padding: 3%;
+    margin-top: 1.5%;
+}
+
+.titulos{
+    display: flex;
+    flex-direction: row;
+    gap: 4%;
+    padding-bottom: 4%;
+    font-family: "Cabin", sans-serif;
+    font-size: 1.3em;
+    color: var(--titulos);
+    font-weight: bold;
+}
+
+.infosAtv{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5%;
+    font-family: "Cabin", sans-serif;
+    font-size: 1.1em;
+    color: var(--texto);
+    font-weight: bold;
+    line-height: 1.5em;
+}
+
+/* CONSCIENTIZACAO IMAGENS */
+
+.quadroImagens{
+    display: flex;
+    justify-content: center;
+}
+
+#imgIdoso{
+    width: 45%;
+    height: auto;
+    margin-top: 6%;
+    margin-bottom: 6%;
+}
+
+/* CONSCIENTIZACAO IDOSO */
+
+.quadroIdoso{
+    display: flex;
+    background-color: var(--fundoIdoso);
+    padding: 3%;
+}
+
+.videoIdoso{
+    display: flex;
+}
+
+.infosIdoso{
+    display: flex;
+    flex-direction: column;
+    padding-left: 4%;
+    font-family: "Cabin", sans-serif;
+    font-size: 1.1em;
+    color: var(--texto);
+    font-weight: bold;
+    line-height: 1.5em;
+}

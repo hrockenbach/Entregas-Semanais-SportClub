@@ -1,0 +1,208 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --fundo:#EEEEEE;
+    --navbar: #2d3297;
+    --texto-navbar: #dddef0;
+    --caixa-fundo: #1F2493;
+    --infos-fundo: #484ECB;
+    --laranja:#FFA800;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--fundo);
+}
+
+main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* padding: 5%; */
+}
+
+/* NAVBAR */
+
+header{
+    display: flex;
+    background-color: var(--navbar);
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.textonav{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 5%;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--texto-navbar);
+    font-family: "Cabin", sans-serif;
+    font-size: 1.1em;
+}
+
+#logo{
+    width: 6%;
+}
+
+/* INFORMAÇÕES DE PERFIL */
+
+.container{
+    padding: 5%;
+}
+
+.infos_perfil{
+    display: flex;
+    background-color: var(--caixa-fundo);
+    /* padding-top: 3%;
+    padding-bottom: 3%; */
+    border-radius: 0.3em;
+    width: 100%;
+    justify-content: space-around;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+.caixa{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--infos-fundo);
+    padding-top: 4%;
+    padding-bottom: 4%;
+    border-radius: 0.2em;
+    font-family: "Cabin", sans-serif;
+    font-size: 1.3em;
+    color: var(--laranja);
+    font-weight: bolder;
+    align-items: center;
+}
+
+.caixa p{
+    padding-bottom: 2%;
+}
+
+#perfil{
+    width: 70%;
+    /* height: 7%; */
+}
+
+.edit{
+    display: flex;
+    padding-top: 4%;
+    width: 15%;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+.visualizacao{
+    display: flex;
+    flex-direction: column;
+    gap: 12%;
+    width: 25%;
+    justify-content: center;
+}
+
+.visualizacao p{
+    display: flex;
+    background-color: var(--infos-fundo);
+    padding: 6%;
+    border-radius: 0.2em;
+    font-family: "Cabin", sans-serif;
+    font-size: 1.1em;
+    color: #EEEEEE;
+}
+
+/* USUÁRIOS */
+
+footer{
+    display: flex;
+    /* justify-content: center; */
+    justify-content: space-between;
+    /* padding-bottom: 4%; */
+    margin-top: 5%;
+}
+
+.seguidores{
+    display: flex;
+    background-color: var(--caixa-fundo);
+    width: 40%;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 0.2em;
+    /* padding-top: 1%;
+    padding-bottom: 1%; */
+}
+
+.ps{
+    padding-top: 3%;
+    padding-bottom: 3%;
+    font-family: "Cabin", sans-serif;
+    font-size: 1.4em;
+    font-weight: bolder;
+    color: var(--laranja);
+}
+
+.caixa_seguidores{
+    display: flex;
+    flex-direction: column;
+    width: 87%;
+    padding: 2%;
+    background-color: var(--infos-fundo);
+    border-radius: 0.5em;
+    font-family: "Cabin", sans-serif;
+    font-size: 1.1em;
+    color: #EEEEEE;
+    line-height: 2.1em;
+}
+
+.caixa_seguidores p{
+    padding-left: 2%;
+}
+
+.caixa_seguindo p{
+    padding-left: 2%;
+}
+
+.seguindo{
+    display: flex;
+    background-color: var(--caixa-fundo);
+    width: 40%;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 0.2em;
+    padding-bottom: 1.5%;
+}
+
+.caixa_seguindo{
+    display: flex;
+    flex-direction: column;
+    width: 87%;
+    padding: 2%;
+    background-color: var(--infos-fundo);
+    border-radius: 0.5em;
+    font-family: "Cabin", sans-serif;
+    font-size: 1.1em;
+    color: #EEEEEE;
+    line-height: 2.1em;
+}
+
+.scrollbar{
+    height: 380px;
+    overflow-y: scroll;
+    scrollbar-color: var(--roxo-escuro) var(--fundo);
+}
