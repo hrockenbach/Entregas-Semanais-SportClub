@@ -95,9 +95,24 @@ nav a {
     overflow: hidden;
 } */
 
-.carrossel img {
-    width: 100%;
+/* INFORMÇÕES */
+
+.informativo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+
+.infoSite{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.1em;
+}
+
+#titulosInfo{
+    font-size: 1.1em;
+}
+
 
 /* COMUNIDADE */
 
@@ -115,7 +130,7 @@ h2{
     text-align: center;
 }
 
-.mom{
+.quadro{
     display: flex;
     flex-direction: row;
     padding-top: 3%;
@@ -173,14 +188,14 @@ h2{
     padding-bottom: 2%;
 }
 
-#conscientizacao_titulo{
+#conscientizacaoTitulo{
     display: flex;
     justify-content: center;
     padding-bottom: 3%;
     color: #C15600;
 }
 
-.mom5{
+.quadroConsc{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -188,7 +203,7 @@ h2{
     padding-bottom: 2%;
 }
 
-.texto2{
+.textoConscientizacao{
     display: flex;
     flex-direction: column;
     font-family: "Cabin", sans-serif;
@@ -196,7 +211,7 @@ h2{
     color: #2C2C2C;
 }
 
-#vejamais_consc{
+#vejamaisConsc{
     padding-top: 3%;
     text-decoration: none;
     color: var(--veja_mais);
@@ -204,7 +219,7 @@ h2{
 
 /* PERGUNTAS */
 
-.perguntas{
+/* .perguntas{
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -269,7 +284,7 @@ h2{
     color: #FF5C00;
     font-weight: bold;
     padding-bottom: 3%;
-}
+} */
 
 /* CADASTRO */
 
@@ -282,7 +297,7 @@ h2{
     /* gap: 10px; */
 }
 
-.mom2{
+.quadroCadastro{
     display: flex;
     flex-direction: row;
     gap: 30%;
@@ -291,7 +306,7 @@ h2{
     padding-bottom: 13%;
 }
 
-#cadastro_titulo{
+#cadastroTitulo{
     color:#BDC0FF;
     padding-bottom: 3%;
 }
@@ -301,7 +316,7 @@ h2{
     width: 12vw;
 }
 
-.card_cadastro{
+.cardCadastro{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -313,7 +328,7 @@ h2{
     height: 48vh;
 }
 
-#texto_card{
+#textoCardCadastro{
     display: flex;
     font-family: "Cabin", sans-serif;
     font-size: 1.9em;

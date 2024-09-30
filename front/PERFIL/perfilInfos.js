@@ -1,7 +1,18 @@
 document.addEventListener("DOMContentLoaded", async () => {
     try {
-        const response = await fetch('http://localhost:3006/api/perfil?id=1');
+        // const id_usuario = localStorage.getItem("id_usuario");
+
+// `http://localhost:3006/api/perfil/${id_usuario}`
+
+        const response = await fetch(`http://localhost:3006/api/perfil/1`,
+            {
+                method: "GET",
+                headers: { "Content-type": "application/json;charset=UTF-8" }
+            }
+        );
+
         const result = await response.json();
+        console.log(result);
 
         if (result) {  
             const perfilContainer = document.getElementById('perfilContainer'); // container no HTML para o perfil

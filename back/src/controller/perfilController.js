@@ -3,27 +3,36 @@ const dotenv = require('dotenv').config();
 
 // Função para buscar informações de perfil do banco de dados
 const getPerfil = (req, res) => {
-  const userId = req.query.id; 
+  const userId = req.params.id_usuario; // Pega o ID da URL corretamente
 
-  if (!userId) {
-    return res.status(400).send('ID do usuário é necessário');
-  }
-
-  const sql = 'SELECT nome_completo, idade, descricao FROM usuarios WHERE id = ?'; 
+  const sql = 'SELECT * FROM usuarios WHERE id = ?';
 
   connection.query(sql, [userId], (err, result) => {
-    if (err) {
-      return res.status(500).send('Erro ao buscar dados'); // 500 para erro de servidor
-    }
-    if (result.length > 0) {
-      res.json(result[0]); // Retorna o primeiro registro
+    // if (err) {
+    //   return res.status(500).send('Erro ao buscar dados');
+    // }
+    // if (result.length > 0) {
+    //   res.json(result[0]); // Retorna o primeiro registro encontrado
+    // } else {
+    //   res.status(404).send('Usuário não encontrado');
+    // }
+
+    if (result) {
+      res.status(201).json({
+        success: true,
+        message: "Sucesso com a busca do usuário!!",
+        data: results,
+      });
     } else {
-      res.status(404).send('Usuário não encontrado');
+      res.status(400).json({
+        success: false,
+        message: "Ops, deu problemas com a busca do usuário!!",
+        data: err,
+      });
     }
   });
 };
 
 module.exports = {
-  storePerfil,
-  getPerfil
-}
+  getPerfil,
+};

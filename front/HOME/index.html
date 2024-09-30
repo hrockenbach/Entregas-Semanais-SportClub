@@ -26,9 +26,9 @@
 
     <nav>
 
-        <section class="textonav"> 
+      <section class="textonav">
 
-        <a href="../HOME/index.html"> Home </p>
+        <a href="../HOME/index.html"> Home </a>
         <a href="../MAPA/mapa.html"> Mapa </a>
         <a href="../COMUNIDADE/comunidade.html"> Comunidade </a>
         <a href="../CONSCIENTIZACAO/conscientização.html"> Conscientização </a>
@@ -36,13 +36,49 @@
         <a href="../CONFIGURACOES/configuracoes.html"> Configurações </a>
 
       </section>
+
     </nav>
 
   </header>
 
   <main>
 
-    <div id="carouselExampleIndicators" class="carousel slide text-center">
+    <section class="informativo">
+
+      <h2> SPORT CLUB </h2>
+
+      <div class="infoSite"> 
+
+      <p id="titulosInfo"> O que é? </p>
+      <p> Sport Club é um site que tem como objetivo tornar as pessoas mais saudáveis através da atividade física e da
+        interação social. Com o uso do Sport Club é possível conhecer pessoas novas, praticar atividades físicas da sua
+        escolha e conhecer os melhores lugares para praicar atividade física!</p>
+
+      </div>
+
+      <div class="infosPaginas">
+
+        <p> Quais as funções? </p>
+        <p> As funções se referem às funcionalidade e objetivos que cada página do site possui, ou seja, em cada uma
+          delas é possível realizar diferentes atribuições!
+        </p>
+
+        <a> Mapa </a>
+        <p> A página de Mapa mostra, através de um mapa interativo da cidade de São Leopoldo, lugares para praticar
+          atividade física, como centros desportivos, parques, quadras públicas, quadras privadas etc. Nela é possível
+          visualizar informações como: Nome, localização e para qual atividade aquele espaço é destinado.
+
+        </p>
+        <a> Conscientização </a>
+        <p> A página de Conscientização concentra vídeos e informações que possam conscientizar as pessoas sobre
+          atividade física, especialmente sobre seus benefícios, dicas e importância.
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- <div id="carouselExampleIndicators" class="carousel slide text-center">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
           aria-current="true" aria-label="Slide 1"></button>
@@ -78,12 +114,12 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
-    </div>
+    </div> -->
 
     <section class="comunidade">
       <h2> COMUNIDADE </h2>
 
-      <div class="mom">
+      <div class="quadro">
 
         <div id="compartilhar">
 
@@ -107,26 +143,26 @@
     </section>
 
     <section class="conscientizacao">
-      <h2 id="conscientizacao_titulo"> POR QUE PRATICAR ATIVIDADE FÍSICA? </h2>
+      <h2 id="conscientizacaoTitulo"> POR QUE PRATICAR ATIVIDADE FÍSICA? </h2>
 
-      <div class="mom5">
+      <div class="quadroConsc">
 
         <iframe width="560" height="315" src="https://www.youtube.com/embed/h_NHMJ9E3Po?si=3EBC4unI1tH17u_V"
           title="YouTube video player" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-        <div class="texto2">
+        <div class="textoConscientizacao">
 
           <p> Conheça os benefícios de uma vida saudável e ativa! </p>
 
-          <a href="https://www.youtube.com/watch?v=h_NHMJ9E3Po" id="vejamais_consc"> Veja Mais <a>
+          <a href="https://www.youtube.com/watch?v=h_NHMJ9E3Po" id="vejamaisConsc"> Veja Mais <a>
 
         </div>
 
     </section>
 
-    <section class="perguntas">
+    <!-- <section class="perguntas">
       <h2 id="titulo_perguntas"> PERGUNTAS QUE VOCÊ POSSA SE INTERESSAR </h2>
 
       <div class="mom3">
@@ -146,17 +182,18 @@
 
       <p id="vejamais_perguntas"> Veja Mais </p>
 
-    </section>
+    </section> -->
 
     <section class="cadastro">
-      <h2 id="cadastro_titulo"> CADASTRE-SE </h2>
+      <h2 id="cadastroTitulo"> CADASTRE-SE </h2>
 
-      <div class="mom2">
-        <div class="card_cadastro">
+      <div class="quadroCadastro">
+
+        <div class="cardCadastro">
 
           <img src="img/iconproduto.png" id="logo_cadastro">
 
-          <p id="texto_card"> Sport Club </p>
+          <p id="textoCardCadastro"> Sport Club </p>
         </div>
 
         <div id="dados">
@@ -164,7 +201,11 @@
           <input class="value" type="text" placeholder="Email" id="email">
           <input class="value" type="password" placeholder="Senha" id="senha">
           <input class="value" type="date" placeholder="Data de Nascimento" id="data">
+
+          <a href="../LOGIN/login.html"> Já possui cadastro? Clique para entrar! </a>
+
           <button id="botao"> Enviar </button>
+
         </div>
 
       </div>
