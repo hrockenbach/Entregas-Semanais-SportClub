@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             caixa.className = 'caixa';
 
             const nomeUsuario = document.createElement('p');
-            nomeUsuario.textContent = result.nome_completo; // Nome completo como 'nomeUsuario'
+            nomeUsuario.textContent = result.data[0].nome_completo; // Nome completo como 'nomeUsuario'
 
             const imgPerfil = document.createElement('img');
             imgPerfil.src = '../PERFIL/perfil.img/icon perfil.png'; // Adapte para o caminho correto da imagem de perfil
