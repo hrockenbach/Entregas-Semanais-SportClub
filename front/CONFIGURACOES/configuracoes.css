@@ -1,0 +1,46 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --fundo:#EEEEEE;
+    --navbar: #2d3297;
+    --fundo_1card: #FFC75B;
+    --texto: #2C2C2C;
+    --titulos: #B65100;
+    --texto-navbar: #dddef0;
+}
+
+/* NAVBAR */
+
+header{
+    display: flex;
+    background-color: var(--navbar);
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.textonav{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 5%;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--texto-navbar);
+    font-family: "Cabin", sans-serif;
+    font-size: 1.1em;
+}
+
+#logo{
+    width: 6%;
+}

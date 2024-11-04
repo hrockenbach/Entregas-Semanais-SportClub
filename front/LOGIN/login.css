@@ -1,0 +1,98 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --fundo_cadastro:#585CC3;
+    --fundo: #1b1d5a;
+    --botao: #1F2488;
+    --azul_claro: #BDC0FF;
+}
+
+body{
+    display: flex;
+    background-color: var(--fundo);
+    justify-content: center;
+    font-family: "Cabin", sans-serif;
+}
+
+/* CADASTRO */
+
+.quadro{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--fundo_cadastro);
+    opacity: 0.9;
+    padding: 50px;
+	width: 500px;
+    border-radius: 1.5em;
+    margin-top: 12%;
+}
+
+h2{
+    display: flex;
+    color: var(--azul_claro);
+    justify-content: center;
+    padding-bottom: 10%;
+}
+
+input{
+    background: transparent;
+    outline: 0;
+    border: 0;
+    border-bottom: 1px solid var(--azul_claro);
+    color: white;
+    font-family: "Cabin", sans-serif;
+    width: 98%;
+}
+
+.dados{
+    display: flex;
+    flex-direction: column;
+    gap: 7vh;
+}
+
+.value{
+    font-family: "Cabin", sans-serif;
+    font-size: 1.2em;
+}
+
+input::placeholder{
+    color: white ;
+    font-family: "Cabin", sans-serif;
+}
+
+.botao{
+    display: flex;
+    justify-content: center;
+}
+
+#botao {
+    padding: 10px;
+	width: 180px;
+    font-family:  "Cabin", sans-serif;
+    font-size: 1.3rem;
+    background-color: var(--botao);
+    border: 0;
+    border-radius: .5vh;
+    cursor: pointer;
+    color:#EEEEEE;
+    margin-top: 2%;
+}
+
+#botao:hover{
+    background: transparent;
+    transition: .2s;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active{
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #ffffff;
+    transition: background-color 5000s ease-in-out 0s;
+    box-shadow: inset 0 0 20px 20px #23232300;
+}

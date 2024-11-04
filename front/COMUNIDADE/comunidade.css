@@ -1,0 +1,336 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --navbar: #2d3297;
+    --fundo:#EEEEEE;
+    --fundo_card: #FFB967;
+    --titulo: #be570e;
+    --texto: #2C2C2C;
+    --texto-navbar: #dddef0;
+    --fundoCriarGrupos: #3f46bd;
+    --caixa-fundo: #1F2493;
+    --infos-fundo: #484ECB;
+    --laranja:#FFA800;
+}
+
+/* NAVBAR */
+
+header{
+    display: flex;
+    background-color: var(--navbar);
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.textonav{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 5%;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--texto-navbar);
+    font-family: "Cabin", sans-serif;
+    font-size: 1.1em;
+}
+
+#logo{
+    width: 6%;
+}
+
+/* ADICIONAR GRUPOS */
+
+.criar_grupos{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    cursor: pointer;
+    padding-top: 3%;
+    padding-bottom: 2%;
+}
+
+.infos_criacao{
+    display: flex;
+    background-color: var(--fundoCriarGrupos);
+    width: 48%;
+    padding: 1.5%;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0.5em;
+    font-family: "Cabin", sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+    line-height: 1.5em;
+}
+
+.textoGrupos{
+    display: flex;
+    flex-direction: column;
+    padding-left: 2%;
+}
+
+#botao{
+    display: flex;
+    width: 55%;
+    cursor: pointer;
+}
+
+button {
+    background: none;
+    border: none;
+} 
+
+/* GRUPOS JÁ CRIADOS */
+
+.comunidadeCard{
+    display: flex;
+    justify-content: center;
+    padding-top: 4%;
+    cursor: pointer;
+}
+
+.grupos{
+    display: flex;
+    background-color: var(--fundo_card);
+    padding: 1.5%;
+    width: 48%;
+    gap: 6%;
+    border-radius: 0.5em;
+}
+
+#foto{
+    display: flex;
+    width: 7.5vw;
+    padding-left: 1%;
+}
+
+.infos{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "Cabin", sans-serif;
+    font-size: 1em;
+    line-height: 1.6em;
+    color: var(--texto);
+}
+
+#titulo{
+    font-size: 1.3em;
+    color: var(--titulo);
+    font-weight: bold;
+}
+
+/* .retangulo2{
+    display: flex;
+    justify-content: center;
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
+.grupos2{
+    display: flex;
+    background-color: var(--fundo_card);
+    padding: 1.5%;
+    width: 48%;
+    gap: 6%;
+    border-radius: 1em;
+}
+
+.infos2{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "Cabin", sans-serif;
+    font-size: 1em;
+    line-height: 1.6em;
+    color: var(--texto);
+} */
+
+.retangulo {
+    display: flex;
+    justify-content: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    cursor: pointer;
+}
+
+.grupos {
+    display: flex;
+    background-color: var(--fundo_card);
+    padding: 1.5%;
+    width: 48%;
+    gap: 6%;
+    border-radius: 0.5em;
+}
+
+#foto {
+    display: flex;
+    width: 7.5vw;
+    padding-left: 1%;
+}
+
+.infos {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "Cabin", sans-serif;
+    font-size: 1em;
+    line-height: 1.6em;
+    color: var(--texto);
+}
+
+#titulo {
+    font-size: 1.3em;
+    color: var(--titulo);
+    font-weight: bold;
+}
+
+/* CRIAR GRUPOS CARD */
+
+#sobreposicao {
+    display: none;
+}
+
+#sobreposicao {
+    display: flex;
+    flex-direction: column;
+} 
+
+#sobreposicao {
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 10;
+} 
+
+/* CARD CRIAÇÃO DE GRUPOS */
+
+.sobreposicao{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 10;
+}
+
+.card{
+    position: fixed;
+    top: 22em;
+    left: 42em;
+    background-color: var(--caixa-fundo);
+    width: 20em;
+    padding: 1.5em;
+    border-radius: 0.8em;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+}
+
+.infosCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--texto-navbar);
+    color: #dddef0;
+}
+
+#fotoGrupo{
+    height: auto;
+    padding-bottom: 5%;
+    margin-left: 20%;
+}
+
+input{
+    background-color: transparent;
+    outline: 0;
+    border: 0;
+    font-family: "Cabin", sans-serif;
+    font-size: 1em;
+    width: 100%;
+    background-color: var(--infos-fundo);
+    padding: 3%;
+    border-radius: 0.3em;
+    color: #EEEEEE;
+}
+
+input::placeholder{
+    color:#EEEEEE;
+}
+
+input[type="file"]::file-selector-button {
+    background-color: #1F2493;
+    border: 0;
+    border-radius: 0.2em;
+    cursor: pointer;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background-color: #1b2079;
+    transition: all ease 1s;
+}
+
+.value{
+    width: 15em;
+    margin-top: 1.2em;
+}
+
+/* BOTOES CARD */
+
+.botoes, #salvar, #fechar{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 2vw;
+    padding-top: 2.5em;
+    padding: 4%;
+    border-radius: 0.3em;
+    font-family: "Cabin", sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    /* width: 11em; */
+    margin-top: 0.8em;
+}
+
+#salvar, #fechar {
+    display: flex;
+    justify-content: center;
+    color:#EEEEEE;
+    background-color:#3c67f7;
+    width: 6vw;
+    /* margin-right: 5%; */
+}
+
+#fechar{
+    color:#EEEEEE;
+    background-color:#e63e14;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active{
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #ffffff;
+    transition: background-color 5000s ease-in-out 0s;
+    box-shadow: inset 0 0 20px 20px #23232300;
+}
+
+/* IMAGEM DOS GRUPOS CRIADOS */
+
+.img-grupo {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}

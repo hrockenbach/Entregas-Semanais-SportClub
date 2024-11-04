@@ -1,0 +1,159 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --navbar: #2d3297;
+    --fundo_cadastro: #2B2E7A;
+    --fundo_card: #2B2E7A;
+    --texto-navbar: #dddef0;
+    --fundo:#EEEEEE;
+    --laranja:#FFA800;
+}
+
+/* NAVBAR */
+
+body{
+    background-color: var(--fundo);
+}
+
+header {
+    display: flex;
+    background-color: var(--navbar);
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.textonav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 5%;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--texto-navbar);
+    font-family: "Cabin", sans-serif;
+    font-size: 1.1em;
+}
+
+#logo {
+    width: 6%;
+}
+
+/* MAPA */
+
+.mapa {
+    display: flex;
+    justify-content: center;
+}
+
+#map {
+    height: 85vh;
+    width: 100%;
+}
+
+/* INFORMAÇÕES CARROSSEL */
+
+.carrossel {
+    display: flex;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background-color: var(--fundo_card);
+    padding-left: 2%;
+}
+
+.carousel {
+    position: relative;
+    width: 24%;
+    overflow: hidden;
+    border: 2px solid #847de7;
+    border-radius: 0.8em;
+}
+
+.carousel-images {
+    display: flex;
+    width: 100%;
+    transition: transform 0.6s ease;
+}
+
+.carousel-images img {
+    width: 105%; /* Largura reduzida das imagens */
+    height: auto /* Altura reduzida das imagens */
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5); /* Cor de fundo */
+    color: white; /* Cor do texto */
+    border: none; /* Remover borda */
+    /* padding: 8px; Ajustar o padding */
+    cursor: pointer;
+    z-index: 10;
+    font-size: 20px; /* Ajustar o tamanho da fonte */
+    border-radius: 1em; /*Botões arredondados*/
+    width: 10%; /* Ajustar a largura dos botões */
+    height: auto /* Ajustar a altura dos botões */
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+.infosQ{
+    display: flex;
+    flex-direction: column;
+    padding-left: 1.8%;
+    font-family: "Cabin", sans-serif;
+    font-size: 1.1em;
+    color: var(--texto-navbar);
+    line-height: 1.6em;
+}
+
+h3{
+    color: var(--laranja);
+}
+
+/* .card{
+    display: flex;
+    flex-direction: row;
+    background-color: #2B2E7A;
+    padding-bottom: 3%;
+    padding-top: 3%;
+    padding-left: 2.9%;
+}
+
+#quadra{
+    display: flex;
+    width: 30vw;
+    height: 40vh;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    padding-left: 3%;
+    font-family: "Cabin", sans-serif;
+    line-height: 1.7em;
+    font-size: 1.2em;
+    padding-top: 1%;
+    color: #BDC0FF;
+} */
