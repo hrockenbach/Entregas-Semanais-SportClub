@@ -21,3 +21,15 @@ app.listen(port, () => console.log(`Rodando na porta ${port}`));
 const cadastroRouter = require('./routes/cadastroRouter');
 const swaggerDocs = swaggerJSDoc(swaggerOptions);
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs))
+
+app.put('/products/:id', (req, res) => {
+    const { id } = req.params;
+    const { nome_completo, nome_usuario, email, senha, idade, descricao, imagemPerfil } = req.body;
+    const query = 'UPDATE products SET nome_completo = ?, nome_usuario = ?, email = ?, senha = ?, idade = ?, descricao = ?, imagemPerfil = ? WHERE id = ?';
+    connection.query(query, [nome_completo, nome_usuario, idade, email, senha, descrisao], (err) => {
+      if (err) {
+        return res.status(500).json({ success: false, message: 'Erro ao atualizar produto.' });
+      }
+      res.json({ success: true, message: 'Produto atualizado com sucesso!' });
+    });
+  });
