@@ -20,7 +20,7 @@ db.connect(err => {
 });
 
 // Rota de login
-router.post('./login', (req, res) => {
+router.post('/login', (req, res) => {
     const { email, senha } = req.body;
 
     if (!email || !senha) {
