@@ -70,7 +70,7 @@ nav a {
     padding: 0;
     align-items: center;
     padding-top: 5%;
-    padding-bottom: 5%;
+    padding-bottom: 1%;
     background-color: var(--fundo_card);
     padding-left: 2%;
 }
@@ -90,24 +90,23 @@ nav a {
 }
 
 .carousel-images img {
-    width: 105%; /* Largura reduzida das imagens */
-    height: auto /* Altura reduzida das imagens */
+    width: 105%; 
+    height: auto 
 }
 
 .carousel-button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5); /* Cor de fundo */
-    color: white; /* Cor do texto */
-    border: none; /* Remover borda */
-    /* padding: 8px; Ajustar o padding */
+    background: rgba(0, 0, 0, 0.5); 
+    color: white;
+    border: none; 
     cursor: pointer;
     z-index: 10;
-    font-size: 20px; /* Ajustar o tamanho da fonte */
-    border-radius: 1em; /*Botões arredondados*/
-    width: 10%; /* Ajustar a largura dos botões */
-    height: auto /* Ajustar a altura dos botões */
+    font-size: 20px; 
+    border-radius: 1em; 
+    width: 10%; 
+    height: auto 
 }
 
 .carousel-button.prev {

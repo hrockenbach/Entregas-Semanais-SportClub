@@ -1,10 +1,5 @@
 let usuario = JSON.parse(localStorage.getItem("usuarioLogado"))
 
-// faz com o que usuario volte pra tela de login se não tiver logado
-if (!localStorage.getItem("usuarioLogado")) {
-    window.location.href = 'login.html';
-}
-
 let button = document.getElementById("botao");
 
 button.onclick = async function (event) {
@@ -18,7 +13,7 @@ button.onclick = async function (event) {
 
     console.log(data)
 
-    const response = await fetch('http://localhost:3006/api//tasks/register', {
+    const response = await fetch('http://localhost:3006/api/tasks/register', {
         method: "POST",
         headers: { "Content-type": "application/json;charset=UTF-8" },
         body: JSON.stringify(data)
@@ -30,9 +25,8 @@ button.onclick = async function (event) {
     if (content.success) {
         alert("Sucesso")
 
-        // window.location.href = '../LOGIN/login.html';
+        window.location.href = '../LOGIN/login.html';
     } else {
         alert('Não');
     }
 }
-

@@ -16,6 +16,8 @@
     --veja_mais:#FF5C00;
     --bolha: #CBCBCB;
     --texto-navbar: #dddef0;
+    --textotitulos: #2C2C2C;
+    --card: #acacac;
 }
 
 body{
@@ -89,30 +91,152 @@ nav a {
     padding-left: 1%;
 } */
 
-/* CARROSSEL */
-
-/* #carrossel {
-    overflow: hidden;
-} */
-
 /* INFORMÇÕES */
 
-.informativo{
+/* .informativo{
     display: flex;
     flex-direction: column;
     justify-content: center;
+} */
+
+/* TITULOS */
+
+#titulosTexto{
+    text-decoration: none;
+    color:var(--textotitulos);
+    font-size: 1.9em;
+    font-weight: bold;
+    font-family: "Cabin", sans-serif;
 }
 
-.infoSite{
+/* O QUE É */
+
+.infoSite_Oqueé{
     display: flex;
     flex-direction: column;
-    font-size: 1.1em;
+    padding-left: 5%;
+    padding-top: 5%;
 }
 
-#titulosInfo{
-    font-size: 1.1em;
+#titulosInfo {
+    display: flex;
+    font-size: 1.9em;
+    text-decoration: none;
+    color: var(--textotitulos);
+    font-family: "Cabin", sans-serif;
+    font-weight: bold;
 }
 
+.textoOqueé{
+    display: flex;
+    width: 45%;
+    font-family: "Cabin", sans-serif;
+    font-size: 1.4em;
+    color: var(--textotitulos);
+    text-align: justify;
+}
+
+.bike{
+
+}
+
+/* FUNÇÕES */
+
+.infosPaginas_funcoes{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    padding-right: 5%;
+}
+
+.textoFuncao{
+    display: flex;
+    font-family: "Cabin", sans-serif;
+    font-size: 1.4em;
+    color: #2C2C2C;
+    justify-content: right;
+    text-align: justify;
+}
+
+.textoFuncao p{
+    width: 40%;
+}
+
+/* MAPA */
+
+.infosPaginas_mapa{
+    display: flex;
+    flex-direction: column;
+    padding-left: 5%;
+    background-color: var(--fundo_cadastro);
+    padding-bottom: 2%;
+    margin-top: 2%;
+    padding-top: 2%;
+}
+
+#tituloMapa{
+    color: #EEEEEE;
+    text-decoration: none;
+    font-size: 1.9em;
+    font-weight: bold;
+    font-family: "Cabin", sans-serif;
+}
+
+.textoMapa{
+    display: flex;
+    width: 50%;
+    text-align: justify;
+    font-family: "Cabin", sans-serif;
+    font-size: 1.4em;
+    color: #ffffff;
+}
+
+#quadroMapa{
+    display: flex;
+    flex-direction: row;
+}
+
+#quadroMapa img{
+    width: 30vw;
+    margin-left: 8%;
+    border-radius: 2.5vh;
+}
+
+/* CONSCIENTIZAÇÃO */
+
+.infosPaginas_Consc{
+    display: flex;
+    flex-direction: column;
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-bottom: 2%;
+}
+
+.cardC{
+    background-color: #acacac;
+    padding: 1%;
+    width: 50%;
+    border-radius: 1vh;
+}
+
+.textoConsc{
+    display: flex;
+    width: 90%;
+    padding-left: 1%;
+    text-align: justify;
+    font-family: "Cabin", sans-serif;
+    font-size: 1.4em;
+    color: var(--textotitulos);
+}
+
+.quadroO{
+    display: flex;
+    flex-direction: row;
+}
+
+#meditar{
+    width: 50%;
+}
 
 /* COMUNIDADE */
 
@@ -288,53 +412,29 @@ h2{
 
 /* CADASTRO */
 
+#cadastroTitulo{
+    display: flex;
+    justify-content: center;
+    padding-top: 2%;
+    padding-bottom: 6%;
+    color: var(--titulo_cadastro);
+}
+
 .cadastro{
     display: flex;
     flex-direction: column;
     background-color: var(--fundo_cadastro);
-    padding-top: 2%;
-    padding-bottom: 2%;
-    /* gap: 10px; */
+    padding-bottom: 5%;
 }
 
 .quadroCadastro{
     display: flex;
     flex-direction: row;
-    gap: 30%;
-    padding-top: 3%;
-    padding-left: 20%;
-    padding-bottom: 13%;
-}
-
-#cadastroTitulo{
-    color:#BDC0FF;
-    padding-bottom: 3%;
-}
-
-#logo_cadastro{
-    display: flex;
-    width: 12vw;
-}
-
-.cardCadastro{
-    display: flex;
-    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    padding: 3.5%;
-    border-radius: 1vh;
-    background-color: var(--card_cadastro);
-    box-shadow: 5px 5px 6px rgb(18, 19, 49);
-    width: 18vw;
-    height: 48vh;
 }
 
-#textoCardCadastro{
-    display: flex;
-    font-family: "Cabin", sans-serif;
-    font-size: 1.9em;
-    color: var(--texto_card_cadastro);
-    font-weight: bold;
-}
+/* INPUT */
 
 input{
     background: transparent;
@@ -346,13 +446,26 @@ input{
     width: 100%;
 }
 
-#dados{
+.dados{
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     flex-direction: column;
     width: 30%;
-    /* justify-content: space-between; */
+    gap: 5vh;
+    width: 40%;
+}
+
+.valores{
+    display: flex;
+    flex-direction: column;
     gap: 7vh;
+}
+
+#textoCadastro{
+    font-family: "Cabin", sans-serif;
+    font-size: 1.3em;
+    text-decoration: none;
+    color: var(--texto_card_cadastro)
 }
 
 .value{
@@ -360,14 +473,41 @@ input{
     font-size: 1.3em;
 }
 
+/* CARD */
+
+.cardCadastro{
+    display: flex;
+    /* flex-direction: column; */
+    text-align: center;
+    background-color: var(--card_cadastro);
+    padding: 1.1em;
+    border-radius: 1.5vh;
+    /* justify-content: center; */
+}
+
+.infosCard{
+    display: flex;
+    flex-direction: column;
+}
+
+#logo_cadastro{
+    display: flex;
+    width: 12vw;
+} 
+
+.infosCard p{
+    font-family: "Cabin", sans-serif;
+    font-size: 1.6em;
+    color: var(--texto_card_cadastro);
+    font-weight: bold;
+}
+
 input::placeholder{
     color: var(--titulo_cadastro);
     font-family: "Cabin", sans-serif;
-    /* font-size: 1.3em; */
 }
 
 #botao {
-    /* width: 10vw; */
     padding: 2.5%;
     font-family:  "Cabin", sans-serif;
     font-size: 1.5rem;

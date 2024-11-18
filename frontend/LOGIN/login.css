@@ -9,11 +9,12 @@
     --fundo: #1b1d5a;
     --botao: #1F2488;
     --azul_claro: #BDC0FF;
+    --card_cadastro: #1F2488;
 }
 
 body{
     display: flex;
-    background-color: var(--fundo);
+    background-color: var(--card_cadastro);
     justify-content: center;
     font-family: "Cabin", sans-serif;
 }
@@ -69,7 +70,7 @@ input::placeholder{
     justify-content: center;
 }
 
-#botao {
+#botaoEnviar {
     padding: 10px;
 	width: 180px;
     font-family:  "Cabin", sans-serif;

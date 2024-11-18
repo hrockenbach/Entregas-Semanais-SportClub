@@ -15,48 +15,55 @@
 
     <header>
 
-        <img src="../PERFIL/perfil.img/iconproduto.png" id="logo">
-
+        <a href="../ALTERAÇÃO_PERFIL/alteracao.html"> </a>
+        <img src="../PERFIL/perfil.img/iconproduto.png" alt="Botão para edição de perfil" id="logo">
+    
         <nav>
-
-            <section class="textonav">
-
-                <a href="../HOME/index.html"> Home </p>
-                    <a href="../MAPA/mapa.html"> Mapa </a>
-                    <a href="../COMUNIDADE/comunidade.html"> Comunidade </a>
-                    <a href="../CONSCIENTIZACAO/conscientização.html"> Conscientização </a>
-                    <a href="../PERFIL/perfil.html"> Perfil </a>
-                    <a href="../CONFIGURACOES/configuracoes.html"> Configurações </a>
-
-            </section>
+    
+          <section class="textonav">
+    
+            <a href="../HOME/index.html"> Home </p>
+              <a href="../MAPA/mapa.html"> Mapa </a>
+              <a href="../COMUNIDADE/comunidade.html"> Comunidade </a>
+              <a href="../CONSCIENTIZACAO/conscientização.html"> Conscientização </a>
+              <a href="../PERFIL/perfil.html"> Perfil </a>
+    
+          </section>
         </nav>
-
-    </header>
+    
+      </header>
 
     <main>
 
         <container class="container">
 
             <section class="alteracao_infos">
-                
-                <img src="../ALTERAÇÃO_PERFIL/img.alteracao/icon perfil.png" id="perfil">
 
-                <p id="perfil_p"> Nome de Usuário </p>
+                <img src="../ALTERAÇÃO_PERFIL/img.alteracao/icon perfil.png" id="perfil">
+                <input type="file" id="imagemPerfil" value="Imagem de Perfil"> </input>
+
+                <input type="text" id="nome_usuario" value="Nome de Usuário"> </p>
 
                 <section class="infos_perfil">
 
                     <div class="lado1">
-                        <p> Nome </p>
-                        <p> Sobrenome </p>
-                        <p> Data de Nascimento </p>
+                        <input type="text" id="nome_completo" value="Nome Completo"> </input>
+                        <!-- <input type="text" id="teste" value="Clique para editar"> Sobrenome </input> -->
+                        <input type="text" id="idade" value="Idade"> </input>
                     </div>
 
                     <div class="lado2">
-                        <p> Email </p>
-                        <p> Senha </p>
-                        <p> Sair da Conta </p>
+                        <input type="text" id="email" value="Email">  </input>
+                        <input type="text" id="senha" value="Senha">  </input>
+                        <input type="text" id="descricao" value="descricao">  </input>
 
                     </div>
+
+                    <div class="botaoSalvar">
+                        <button> Salvar </button>
+                    </div>
+
+                    <!-- para atualizar dados, precisa criar uma rota put e uma função no controller para isso, será utilizado o comando de UPDATE do banco de dados. Precisa passar o ID do usuario que quer alterar -->
                 </section>
             </section>
         </container>

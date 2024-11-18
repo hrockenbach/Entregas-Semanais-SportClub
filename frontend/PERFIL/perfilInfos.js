@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 // `http://localhost:3006/api/perfil/${id_usuario}`
 
-        const response = await fetch(`http://localhost:3006/api/perfil/1`,
+        const response = await fetch(`http://localhost:3006/api/perfil/${id_usuario}`,
             {
                 method: "GET",
                 headers: { "Content-type": "application/json;charset=UTF-8" }
@@ -15,58 +15,61 @@ document.addEventListener("DOMContentLoaded", async () => {
         console.log(result);
 
         if (result) {  
-            const perfilContainer = document.getElementById('perfilContainer'); // container no HTML para o perfil
+            document.getElementById("nome").innerText = result.data[0].nome_completo;
+            document.getElementById("idade").innerText = result.data[0].data_nascimento;
 
-            // Criação da estrutura de perfil
-            const perfilSection = document.createElement('section');
-            perfilSection.className = 'infos_perfil';
+            // const perfilContainer = document.getElementById('perfilContainer'); // container no HTML para o perfil
 
-            // Div para o nome de usuário, imagem de perfil e botão de edição
-            const caixa = document.createElement('div');
-            caixa.className = 'caixa';
+            // // Criação da estrutura de perfil
+            // const perfilSection = document.createElement('section');
+            // perfilSection.className = 'infos_perfil';
 
-            const nomeUsuario = document.createElement('p');
-            nomeUsuario.textContent = result.data[0].nome_completo; // Nome completo como 'nomeUsuario'
+            // // Div para o nome de usuário, imagem de perfil e botão de edição
+            // const caixa = document.createElement('div');
+            // caixa.className = 'caixa';
 
-            const imgPerfil = document.createElement('img');
-            imgPerfil.src = '../PERFIL/perfil.img/icon perfil.png'; // Adapte para o caminho correto da imagem de perfil
-            imgPerfil.id = 'perfil';
+            // const nomeUsuario = document.createElement('p');
+            // nomeUsuario.textContent = result.data[0].nome_completo; // Nome completo como 'nomeUsuario'
 
-            const botaoEditar = document.createElement('button');
-            botaoEditar.className = 'edit';
-            botaoEditar.type = 'submit';
+            // const imgPerfil = document.createElement('img');
+            // imgPerfil.src = '../PERFIL/perfil.img/icon perfil.png'; // Adapte para o caminho correto da imagem de perfil
+            // imgPerfil.id = 'perfil';
 
-            const imgEditar = document.createElement('img');
-            imgEditar.src = '../PERFIL/perfil.img/edit.png';
-            botaoEditar.appendChild(imgEditar);
+            // const botaoEditar = document.createElement('button');
+            // botaoEditar.className = 'edit';
+            // botaoEditar.type = 'submit';
 
-            caixa.appendChild(nomeUsuario);
-            caixa.appendChild(imgPerfil);
-            caixa.appendChild(botaoEditar);
+            // const imgEditar = document.createElement('img');
+            // imgEditar.src = '../PERFIL/perfil.img/edit.png';
+            // botaoEditar.appendChild(imgEditar);
 
-            // Div para as informações do perfil (Nome Completo, Idade, Descrição)
-            const visualizacao = document.createElement('div');
-            visualizacao.className = 'visualizacao';
+            // caixa.appendChild(nomeUsuario);
+            // caixa.appendChild(imgPerfil);
+            // caixa.appendChild(botaoEditar);
 
-            const nomeCompleto = document.createElement('p');
-            nomeCompleto.textContent = `Nome Completo: ${result.nome_completo}`;
+            // // Div para as informações do perfil (Nome Completo, Idade, Descrição)
+            // const visualizacao = document.createElement('div');
+            // visualizacao.className = 'visualizacao';
 
-            const idade = document.createElement('p');
-            idade.textContent = `Idade: ${result.idade}`;
+            // const nomeCompleto = document.createElement('p');
+            // nomeCompleto.textContent = `Nome Completo: ${result.nome_completo}`;
 
-            const descricao = document.createElement('p');
-            descricao.textContent = `Descrição: ${result.descricao}`;
+            // const idade = document.createElement('p');
+            // idade.textContent = `Idade: ${result.idade}`;
 
-            visualizacao.appendChild(nomeCompleto);
-            visualizacao.appendChild(idade);
-            visualizacao.appendChild(descricao);
+            // const descricao = document.createElement('p');
+            // descricao.textContent = `Descrição: ${result.descricao}`;
 
-            // Adiciona os elementos à seção principal do perfil
-            perfilSection.appendChild(caixa);
-            perfilSection.appendChild(visualizacao);
+            // visualizacao.appendChild(nomeCompleto);
+            // visualizacao.appendChild(idade);
+            // visualizacao.appendChild(descricao);
 
-            // Insere o perfil na página (supondo que haja um div com id 'perfilContainer' no HTML)
-            perfilContainer.appendChild(perfilSection);
+            // // Adiciona os elementos à seção principal do perfil
+            // perfilSection.appendChild(caixa);
+            // perfilSection.appendChild(visualizacao);
+
+            // // Insere o perfil na página (supondo que haja um div com id 'perfilContainer' no HTML)
+            // perfilContainer.appendChild(perfilSection);
         } else {
             console.log('Erro ao carregar o perfil.');
         }
