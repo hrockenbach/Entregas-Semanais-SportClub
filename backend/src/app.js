@@ -59,15 +59,15 @@ const fs = require('fs');
 const fileupload = require('express-fileupload');
 const swaggerUi = require("swagger-ui-express");
 const swaggerJsDoc = require("swagger-jsdoc");
-const loginRouter = require('./routes/loginRouter'); // Importa a rota de login
 
-// Inicialize o express antes de qualquer uso da variável 'app'
+// Usando o express antes do uso da variável 'app'
 const app = express();
 
 const cors = require('cors');
 const cadastroRouter = require('./routes/cadastroRouter');
 const comunidadeRouter = require('./routes/comunidadeRouter');
 const perfilRouter = require('./routes/perfilRouter');
+const loginRouter = require('./routes/loginRouter');
 
 const swaggerOptions = {
     swaggerDefinition: {

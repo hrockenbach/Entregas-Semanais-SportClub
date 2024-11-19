@@ -1,22 +1,14 @@
 const express = require('express');
 const mysql = require('mysql2'); 
+const dotenv = require("dotenv").config();
 const router = express.Router();
 
 // conexão com o banco 
 const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'root',
-    database: 'SportClub'
-});
-
-// Verifica conexão com o banco
-db.connect(err => {
-    if (err) {
-        console.error('Erro ao conectar no banco de dados:', err);
-    } else {
-        console.log('Conectado ao banco de dados');
-    }
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_DATABASE,
 });
 
 // Rota de login
